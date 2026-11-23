@@ -11,38 +11,38 @@
 <body>
 
     <div class="tabs">
-        <button class="tab-btn active" onclick="abrirTab(0)">Listar Clientes</button>
-        <button class="tab-btn" onclick="abrirTab(1)">Cadastrar Cliente</button>
+        <button class="tab-btn active" onclick="abrirTab(0)">Listar Alunos</button>
+        <button class="tab-btn" onclick="abrirTab(1)">Cadastrar Aluno</button>
     </div>
     <a id="logout" class="logout-link" onclick="logout()">Logout</a>
 
     <!-- TAB 1 -->
     <div class="tab-content active">
-        <h2>Clientes Cadastrados</h2>
+        <h2>Alunos Cadastrados</h2>
 
         <div class="search-container">
             <input type="text" id="busca_cpf" placeholder="Buscar por CPF">
-            <button onclick="buscarClientes()">Buscar</button>
-            <button onclick="listarClientes()" style="background: #6c757d;">Limpar</button>
+            <button onclick="buscarAlunos()">Buscar</button>
+            <button onclick="listarAlunos()" style="background: #6c757d;">Limpar</button>
         </div>
 
-        <div id="listaClientes" class="client-list"></div>
+        <div id="listaAlunos" class="client-list"></div>
     </div>
 
     <!-- TAB 2 -->
     <div class="tab-content">
-        <h2>Cadastrar Cliente</h2>
+        <h2>Cadastrar Aluno</h2>
 
-        <input type="text" id="cliente_cpf" placeholder="CPF">
-        <input type="text" id="cliente_nome" placeholder="Nome">
-        <input type="number" id="cliente_idade" placeholder="Idade">
-        <input type="text" id="cliente_endereco" placeholder="Endereço">
-        <input type="text" id="cliente_bairro" placeholder="Bairro">
-        <input type="text" id="cliente_contato" placeholder="Contato">
+        
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="matricula" placeholder="Matricula">
+        <input type="text" id="dataNascimento" placeholder="dataNascimento">
+        
 
-        <button onclick="cadastrarCliente()">Cadastrar Cliente</button>
+        <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
 
-        <div class="resultado" id="resultadoCliente"></div>
+        <div class="resultado" id="resultadoAluno"></div>
     </div>
 
     <script src="script.js"></script>

@@ -91,11 +91,11 @@ button {
     padding: 10px 20px;
 }
 
-.client-list {
+.aluno-list {
     margin-top: 20px;
 }
 
-.client-card {
+.aluno-card {
     background: #fff;
     padding: 15px;
     margin-bottom: 12px;
@@ -107,23 +107,23 @@ button {
     border-bottom: 1px solid #eee;
 }
 
-.client-card h3 {
+.aluno-card h3 {
     margin: 0 0 8px 0;
     color: #333;
     font-size: 1.1rem;
 }
 
-.client-card p {
+.aluno-card p {
     margin: 4px 0;
     font-size: 0.95rem;
     color: #555;
 }
 
-.client-card strong {
+.aluno-card strong {
     color: #222;
 }
 
-.no-clients {
+.no-alunos {
     text-align: center;
     color: #888;
     padding: 20px;
