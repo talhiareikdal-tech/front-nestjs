@@ -151,7 +151,7 @@ function logout() {
 
 async function listarAlunos() {
     // Limpar o input de busca
-    const buscaInput = document.getElementById("busca_cpf");
+    const buscaInput = document.getElementById("busca_nome");
     if (buscaInput) buscaInput.value = "";
 
     try {
@@ -167,8 +167,8 @@ async function listarAlunos() {
 }
 
 async function buscarAlunos() {
-    const cpfBusca = document.getElementById("busca_cpf").value.trim();
-    if (!cpfBusca) {
+    const nomeBusca = document.getElementById("busca_nome").value.trim();
+    if (!nomeBusca) {
         listarAlunos();
         return;
     }
@@ -178,8 +178,8 @@ async function buscarAlunos() {
         const alunos = await res.json();
         
         // Filtrar pelo CPF ignorando caracteres não numéricos
-        const cpfLimpo = cpfBusca.replace(/\D/g, '');
-        const filtrados = alunos.filter(c => c.cpf && c.cpf.replace(/\D/g, '') === cpfLimpo);
+        const nomeLimpo = nomeBusca.trim().toLowerCase();
+        const filtrados = alunos.filter(aluno => aluno.nome && aluno.nome.trim().toLowerCase() === nomeLimpo);
         renderizarAlunos(filtrados);
     } catch (erro) {
         const container = document.getElementById("listaAlunos");
